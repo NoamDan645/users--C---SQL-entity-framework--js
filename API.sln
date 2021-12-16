@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DATA", "DATA\DATA.csproj", "{9D78416C-4308-4A93-80B2-BED0803F4710}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentServices", "StudentServices\StudentServices.csproj", "{ED45D050-3959-440F-BB81-57BA77399C1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "front", "front\front.csproj", "{742E2664-1790-427C-8810-1A799F16E7B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D78416C-4308-4A93-80B2-BED0803F4710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D78416C-4308-4A93-80B2-BED0803F4710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D78416C-4308-4A93-80B2-BED0803F4710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D78416C-4308-4A93-80B2-BED0803F4710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED45D050-3959-440F-BB81-57BA77399C1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED45D050-3959-440F-BB81-57BA77399C1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED45D050-3959-440F-BB81-57BA77399C1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED45D050-3959-440F-BB81-57BA77399C1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{742E2664-1790-427C-8810-1A799F16E7B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{742E2664-1790-427C-8810-1A799F16E7B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{742E2664-1790-427C-8810-1A799F16E7B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{742E2664-1790-427C-8810-1A799F16E7B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF10C140-2091-477D-AAB8-A31F3FEDB51B}
+	EndGlobalSection
+EndGlobal

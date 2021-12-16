@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../Scripts/jquery-3.4.1.js"></script>
+    <script>
+        function loadStudent() {
+            $.ajax({
+                dataType: "json",
+                url: "/api/Student/",
+                contentType: "application/json",
+                type: "GET",
+                // data: JSON.stringify({}),
+                success: function (data) {
+                    $("#students").empty();
+
+                    for (var i = 0; i < data.length; i++) {
+                        var $p = $("<p>");
+                        $p.html(" id :  " + data[i].ID + " - Name : " + data[i].Name +" - Phone : " + data[i].Phone)
+                        $("#students").append($p);
+                    }
+                    console.log('success');
+                   },
+                error: function (err) {
+                    console.log(err);
+                }
+            })
+        }
+        function updateStudent() {
+
+            var id = $('#studentId').val();
+            var name = $('#studentName').val();
+            var phone = $('#studentPhone').val();
+
+            $.ajax({
+                dataType: "json",
+                url: `/api/Student/${id}/${name}/${phone}`,
+                contentType: "application/json",
+                type: "PUT",
+                // data: JSON.stringify({}),
+                success: function (data) {
+                    loadStudent();
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            })
+
+          
+        }
+        function deleteStudent() {
+            var id = $('#studentId').val();
+            var name = $('#studentName').val();
+            var phone = $('#studentPhone').val();
+
+
+            $.ajax({
+                dataType: "json",
+                url: `/api/Student/`,
+                contentType: "application/json",
+                type: "DElETE",
+                // data: JSON.stringify({}),
+                success: function (data) {
+                    loadStudent();
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            })
+
+            alert("deleteStudent")
+
+        }
+    </script>
+
+</head>
+<body>
+    <label>
+        add student
+        <input type="text" placeholder="student ID" id="studentId" />
+        <input type="text" placeholder="student name" id="studentName" />
+        <input type="text" placeholder="student Phone" id="studentPhone" />
+        <input type="button" value="add student" onclick="updateStudent()" />
+        <input type="button" value="delete student" onclick="deleteStudent()" />
+    </label>       
+
+    <br />
+    <br />
+
+
+    <input type="button" value="load students" onclick="loadStudent()" />
+    <div id="students"></div>
+</body>
+</html>
